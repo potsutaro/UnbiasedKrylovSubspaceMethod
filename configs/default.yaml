@@ -32,6 +32,6 @@ paths:
   diag: diagonalized_data
 
 files:
-  rdata: datapath
+  rdata: [PATH TO RAW DATA]
   cdata: cdata
   ndata: ndata
