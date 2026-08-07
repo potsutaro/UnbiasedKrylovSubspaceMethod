@@ -109,8 +109,8 @@ project/
 Clone the repository
 
 ```bash
-git clone https://github.com/yourname/LatticeSpectroscopy.git
-cd LatticeSpectroscopy
+git clone https://github.com/yourname/UnbiasedKrylovSubspaceMethod.git
+cd UnbiasedKrylovSubspaceMethod
 ```
 
 Install the required Python packages
