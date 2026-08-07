@@ -137,11 +137,106 @@ statistics:
   bootstrap: 500
 
 analysis:
+  subtraction: 0
+  normalization: 1
+  init: 0
   size: 21
   dof: 22
   fitini: 3
   fitfin: 6
+  svdrankmax: 4
+
+extrapolation:
+  rankmax: 3
+  rankmin: 2
+  msize: 11
+
+mock:
+  state: 4
+  error: 1e-15
+
+paths:
+  corr: correlator_data
+  diag: diagonalized_data
+
+files:
+  rdata: raw_data/cdata_jk
+  cdata: cdata
+  ndata: ndata
 ```
+
+---
+
+### `lattice`
+
+| Parameter | Description              |
+| --------- | ------------------------ |
+| `T`       | Temporal lattice extent. |
+
+---
+
+### `statistics`
+
+| Parameter       | Description                                  |
+| --------------- | -------------------------------------------- |
+| `stati`         | Statistical analysis mode (`1` = bootstrap). |
+| `configuration` | Number of gauge configurations.              |
+| `bootstrap`     | Number of bootstrap samples.                 |
+
+---
+
+### `analysis`
+
+| Parameter       | Description                                                              |
+| --------------- | ------------------------------------------------------------------------ |
+| `subtraction`   | Correlator normalization (fixed).                                        |
+| `normalization` | Time slice used for correlator normalization.                            |
+| `init`          | Initial time slice used in the TGEVP analysis.                           |
+| `size`          | Dimension of the correlator matrix.                                      |
+| `dof`           | Number of degrees of freedom used in the TGEVP (size+1).                 |
+| `fitini`        | First time slice included in the fit.                                    |
+| `fitfin`        | Last time slice included in the fit.                                     |
+| `svdrankmax`    | Maximum SVD rank used for truncated-SVD analyses.                        |
+
+---
+
+### `extrapolation`
+
+| Parameter | Description                                       |
+| --------- | ------------------------------------------------- |
+| `rankmin` | Minimum rank included in the extrapolation.       |
+| `rankmax` | Maximum rank included in the extrapolation.       |
+| `msize`   | Number of matrix sizes used in the extrapolation. |
+
+---
+
+### `mock`
+
+| Parameter | Description                                               |
+| --------- | --------------------------------------------------------- |
+| `state`   | Number of states used when generating mock correlators.   |
+| `error`   | Statistical uncertainty assigned to the mock correlators. |
+
+---
+
+### `paths`
+
+| Parameter | Description                                                      |
+| --------- | ---------------------------------------------------------------- |
+| `corr`    | Directory containing correlator data.                            |
+| `diag`    | Directory for diagonalized correlators and spectroscopy results. |
+
+---
+
+### `files`
+
+| Parameter | Description                                         |
+| --------- | --------------------------------------------------- |
+| `rdata`   | Input raw correlator data.                          |
+| `cdata`   | Name of the correlator dataset after preprocessing. |
+| `ndata`   | Name of the normalized correlator dataset.          |
+
+
 
 This design allows the entire analysis to be reproduced simply by sharing the configuration file.
 
