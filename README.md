@@ -1,6 +1,6 @@
-# Lattice Spectroscopy Analysis with Unbiased Krylov subspace method
+# Lattice Spectroscopy with Unbiased Krylov subspace method
 
-A Python framework for spectroscopy analysis of lattice correlation functions based on the Transfer Matrix Generalized Eigenvalue Problem (TGEVP).
+A Python framework for spectroscopy analysis of lattice correlation functions based on the Unbiased Krylov subspace method (DOI: 10.1103/9891-x33t).
 
 The package provides an end-to-end workflow from raw correlation functions to spectroscopy observables.
 
