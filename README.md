@@ -31,24 +31,26 @@ The package provides an end-to-end workflow from raw correlation functions to sp
                             |
                             |
                             v
-                 +----------+----------+   
-                 | Rank Check          |  
-                 | EnergyVariance      |   
-                 +----------+----------+   
+                +-----------+------------+   
+                | Rank Check             |  
+                | tgevp_EnergyVariance.py|   
+                +-----------+------------+   
                             | 
                             |  
                             v  
                  +----------+-----------+
                  | Spectroscopy         |
-                 | TGEVP                |
+                 | tgevp_Spectroscopy.py|
                  +----------+-----------+
                             |
                             |
                             v
-                 +----------------------+
-                 | Eigenvalue           |
-                 | Extrapolation        |
-                 +----------+-----------+
+                 +----------+---------------------+
+                 | Eigenvalue                     |
+                 | tgevp_EigenvalueExt.py.        |
+                 | or                             |
+                 | tgevp_EigenvalueExtNoiseless.py|
+                 +----------+---------------------+
                             |
                             v
                  +----------------------+
