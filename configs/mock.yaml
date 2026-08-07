@@ -1,0 +1,37 @@
+# config.yaml
+
+lattice:
+  T: 64
+
+statistics:
+  stati: 1  # 1 for bootstrap
+  configuration: 500
+  bootstrap: 500
+
+analysis:
+  subtraction: 0
+  normalization: 1
+  init: 0
+  size: 21
+  dof: 22
+  fitini: 3
+  fitfin: 6
+  svdrankmax: 4
+
+extrapolation:
+  rankmax: 3
+  rankmin: 2
+  msize: 11
+
+mock:
+  state: 4
+  error: 0.000000000000001
+
+paths:
+  corr: correlator_data
+  diag: diagonalized_data
+
+files:
+  rdata: raw_data/cdata_jk
+  cdata: cdata
+  ndata: ndata
