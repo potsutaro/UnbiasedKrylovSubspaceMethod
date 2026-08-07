@@ -25,21 +25,24 @@ The package provides an end-to-end workflow from raw correlation functions to sp
                             v
                  +---------------------+
                  | Correlator          |
-                 | Subtraction         |
+                 | Normalization       |
                  | sweep_subtraction.py|
                  +----------+----------+
                             |
-                 +----------+----------+
-                 |                     |
-                 |                     |
-                 v                     v
-      +------------------+   +----------------------+
-      | Rank Check       |   | Spectroscopy         |
-      | EnergyVariance   |   | TGEVP                |
-      +--------+---------+   +----------+-----------+
-               |                        |
-               |                        |
-               +------------+-----------+
+                            |
+                            v
+                 +----------+----------+   
+                 | Rank Check          |  
+                 | EnergyVariance      |   
+                 +----------+----------+   
+                            | 
+                            |  
+                            v  
+                 +----------+-----------+
+                 | Spectroscopy         |
+                 | TGEVP                |
+                 +----------+-----------+
+                            |
                             |
                             v
                  +----------------------+
