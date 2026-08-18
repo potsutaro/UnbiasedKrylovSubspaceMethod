@@ -331,9 +331,3 @@ To add a new analysis,
 
 If this software contributes to published work, please cite the corresponding publication.
 
----
-
-# License
-
-MIT License
-
