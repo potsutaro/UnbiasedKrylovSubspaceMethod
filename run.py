@@ -26,7 +26,6 @@ def main():
     cfg = Config.from_yaml(args.config)
 
     if args.task == "data":
-        # data_bootstrap.main(cfg)
         data_binnedbootstrap.main(cfg)
         sweep_subtraction.main(cfg)
 
@@ -44,7 +43,6 @@ def main():
 
     if args.task == "mock":
         gen_mock_Ct.main(cfg)
-        # data_bootstrap.main(cfg)
         data_binnedbootstrap.main(cfg)
         sweep_subtraction.main(cfg)
 

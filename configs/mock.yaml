@@ -7,7 +7,7 @@ statistics:
   stati: 1  # 1 for bootstrap
   configuration: 100
   bootstrap: 200
-  binsize: 5
+  binsize: 1
 
 analysis:
   subtraction: 0
