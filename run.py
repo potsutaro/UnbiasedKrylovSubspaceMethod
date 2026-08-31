@@ -2,6 +2,7 @@ import argparse
 import yaml
 
 from analysis import data_bootstrap
+from analysis import data_binnedbootstrap
 from analysis import sweep_subtraction
 from analysis import tgevp_EnergyVariance
 from analysis import tgevp_Spectroscopy
@@ -25,7 +26,8 @@ def main():
     cfg = Config.from_yaml(args.config)
 
     if args.task == "data":
-        data_bootstrap.main(cfg)
+        # data_bootstrap.main(cfg)
+        data_binnedbootstrap.main(cfg)
         sweep_subtraction.main(cfg)
 
     if args.task == "RankCheck":
@@ -42,7 +44,8 @@ def main():
 
     if args.task == "mock":
         gen_mock_Ct.main(cfg)
-        data_bootstrap.main(cfg)
+        # data_bootstrap.main(cfg)
+        data_binnedbootstrap.main(cfg)
         sweep_subtraction.main(cfg)
 
     if args.task == "EvExtNoiseless":

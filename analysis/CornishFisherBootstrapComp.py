@@ -133,6 +133,5 @@ plt.ylabel('Density')
 plt.grid(True)
 plt.legend()
 plt.tight_layout()
-plt.savefig('dist.pdf')
 plt.show()
 

@@ -6,7 +6,8 @@ lattice:
 statistics:
   stati: 1  # 1 for bootstrap
   configuration: 100
-  bootstrap: 500
+  bootstrap: 200
+  binsize: 5
 
 analysis:
   subtraction: 0

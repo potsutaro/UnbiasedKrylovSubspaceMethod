@@ -9,6 +9,7 @@ class Lattice:
 class Statistics:
     stati: int
     configuration: int
+    binsize: int
     bootstrap: int
 
 @dataclass

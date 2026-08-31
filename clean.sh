@@ -1,5 +1,6 @@
 #!/bin/sh
 
+rm -f ./raw_data/*
 rm -f ./singularvalues_data/*
 rm -f ./correlator_data/*
 rm -f ./traditional_data/*

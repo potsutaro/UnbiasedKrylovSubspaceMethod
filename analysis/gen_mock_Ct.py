@@ -8,7 +8,7 @@ from config import Config
 #=============================================================#
 # call as a function
 
-def main(T, conf, ssize, states, Bs, err):
+def main(cfg: Config):
 
     T = cfg.lattice.T
     conf = cfg.statistics.configuration
