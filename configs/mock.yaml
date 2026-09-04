@@ -10,7 +10,6 @@ statistics:
   binsize: 1
 
 analysis:
-  subtraction: 0
   normalization: 1
   init: 0
   size: 21

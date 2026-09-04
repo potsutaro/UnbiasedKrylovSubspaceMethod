@@ -126,6 +126,12 @@ pip install numpy scipy matplotlib pyyaml
 All parameters are specified in a YAML file.
 
 Example:
+- Temporal length = 64
+- Configuration number = 500
+- Bootstrap samples = 500
+- Use data between t=0~21
+- Low-rank approximation with rank=1,2,3
+- Extrapolation with rank=2 and 3
 
 ```yaml
 lattice:
@@ -137,7 +143,6 @@ statistics:
   bootstrap: 500
 
 analysis:
-  subtraction: 0
   normalization: 1
   init: 0
   size: 21
@@ -177,11 +182,11 @@ files:
 
 ### `statistics`
 
-| Parameter       | Description                                  |
-| --------------- | -------------------------------------------- |
-| `stati`         | Statistical analysis mode (`1` = bootstrap). |
-| `configuration` | Number of gauge configurations.              |
-| `bootstrap`     | Number of bootstrap samples.                 |
+| Parameter       | Description                                           |
+| --------------- | ----------------------------------------------------- |
+| `stati`         | Statistical analysis mode (Fixed to `1` = bootstrap). |
+| `configuration` | Number of gauge configurations.                       |
+| `bootstrap`     | Number of bootstrap samples.                          |
 
 ---
 
@@ -189,11 +194,10 @@ files:
 
 | Parameter       | Description                                                              |
 | --------------- | ------------------------------------------------------------------------ |
-| `subtraction`   | Correlator normalization (fixed).                                        |
 | `normalization` | Time slice used for correlator normalization.                            |
-| `init`          | Initial time slice used in the TGEVP analysis.                           |
-| `size`          | Dimension of the correlator matrix.                                      |
-| `dof`           | Number of degrees of freedom used in the TGEVP (size+1).                 |
+| `init`          | Initial time slice of the correlator (Fixed to 0).                       |
+| `size`          | Final time slice of the correlator.                                      |
+| `dof`           | Number of degrees of freedom (size+1).                                   |
 | `fitini`        | First time slice included in the fit.                                    |
 | `fitfin`        | Last time slice included in the fit.                                     |
 | `svdrankmax`    | Maximum SVD rank used for truncated-SVD analyses.                        |

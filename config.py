@@ -14,7 +14,6 @@ class Statistics:
 
 @dataclass
 class Analysis:
-    subtraction: int
     normalization: int
     init: int
     size: int

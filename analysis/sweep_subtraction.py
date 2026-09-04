@@ -18,7 +18,6 @@ def main(cfg: Config):
     datapath =  cfg.paths.corr
     datafile =  cfg.files.cdata
     flag =  cfg.statistics.stati
-    subtraction = cfg.analysis.subtraction
     t0 = cfg.analysis.normalization
     ssize = cfg.analysis.size
     T = cfg.lattice.T
