@@ -196,7 +196,7 @@ files:
 | --------------- | ------------------------------------------------------------------------ |
 | `normalization` | Time slice used for correlator normalization.                            |
 | `init`          | Initial time slice of the correlator (Fixed to 0).                       |
-| `size`          | Final time slice of the correlator.                                      |
+| `size`          | Final time slice of the correlator (Must be odd number).                 |
 | `dof`           | Number of degrees of freedom (size+1).                                   |
 | `fitini`        | First time slice included in the fit.                                    |
 | `fitfin`        | Last time slice included in the fit.                                     |
